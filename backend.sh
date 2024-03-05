@@ -1,5 +1,9 @@
+mysql_root_password=$1
+echo disable default nodejs version module
 dnf module disable nodejs -y &>>/tmp/expense.log
+echo enable nodejs module for v20
 dnf module enable nodejs:20 -y &>>/tmp/expense.log
+echo install nodejs
 dnf install nodejs -y &>>/tmp/expense.log
 useradd expense &>>/tmp/expense.log
 cp backend.service /etc/systemd/system/backend.service &>>/tmp/expense.log
