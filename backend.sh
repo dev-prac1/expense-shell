@@ -2,6 +2,12 @@ mysql_root_password=$1
 
 source common.sh
 
+# if password is not provided then we will exit
+if [ -z "${mysql_root_password}" ]; then
+  echo input password is missing.
+  exit1
+  fi
+
 print_task_heading "disable default nodejs version module"
 dnf module disable nodejs -y &>>/tmp/expense.log
 echo $?
