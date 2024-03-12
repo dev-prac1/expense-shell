@@ -1,6 +1,6 @@
-mysql_root_password=$1
-
 source common.sh
+
+mysql_root_password=$1
 
 # if password is not provided then we will exit
 if [ -z "${mysql_root_password}" ]; then
