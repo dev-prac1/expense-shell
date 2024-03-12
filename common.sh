@@ -5,8 +5,8 @@ print_task_heading() {
 
 check_status() {
   if [ $? -eq 0 ]; then
-    echo sucess
+    echo -e "\e[32msucess\e[0m"
     else
-      echo failure
+      echo -e "\e[31mfailure\e[0m"
       fi
 }
