@@ -13,7 +13,7 @@ check_status $?
 
 app_prereq
 
-print_task_heading"start nginx service"
+print_task_heading "start nginx service"
 systemctl enable nginx &>>$LOG
 systemctl restart nginx &>>$LOG
 check_status $?
