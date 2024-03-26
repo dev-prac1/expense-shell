@@ -12,5 +12,6 @@ check_status() {
     echo -e "\e[32msucess\e[0m"
     else
       echo -e "\e[31mfailure\e[0m"
+      exit 2
       fi
 }
