@@ -40,7 +40,7 @@ mkdir /app &>>$LOG
 check_status $?
 
 print_task_heading "download app content"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
 check_status $?
 
 print_task_heading "extract app content"
